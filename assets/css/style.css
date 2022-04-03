@@ -23,11 +23,12 @@ textarea{
 
 .description{
   white-space: pre-wrap;
+  border-radius: 10px;
 }
 
 .time-block{
   text-align: center;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .row {
@@ -58,9 +59,8 @@ textarea{
 }
 
 .saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border: none;
+  border-radius: 15px;
   background-color: #06AED5;
   color: white;
 }
@@ -69,3 +69,34 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+@media screen and (max-width: 992px) {
+  .hour {
+    padding: 15px;
+  }
+
+  .description {
+    height: 85px;
+    border: none;
+  }
+
+  .saveBtn {
+    padding: 20px 0;
+    border: none;
+  }
+  .time-block {
+    margin-bottom: 10px;
+  }
+  .row {
+    height: auto;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 591px) {
+  .container{
+    margin: auto;
+    width: 90%;
+  }
+
+}
+
