@@ -34,8 +34,8 @@ var auditTime = function() {
     })
 };
 
-var loadAStorage = function (){
-    
+var loadStorage = function (){
+
     $("#hour9 .description").val(JSON.parse(localStorage.getItem("9")));
     $("#hour10 .description").val(JSON.parse(localStorage.getItem("10")));
     $("#hour11 .description").val(JSON.parse(localStorage.getItem("11")));
@@ -47,7 +47,7 @@ var loadAStorage = function (){
     $("#hour17 .description").val(JSON.parse(localStorage.getItem("17")));
 }
 
-loadAStorage();
+loadStorage();
 
 
 $(".saveBtn").on("click", buttonClickHandler);
