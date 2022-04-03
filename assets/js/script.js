@@ -2,16 +2,14 @@
 var currentTime = moment().format("dddd, MMMM Do, YYYY");
 $("#currentDay").append(currentTime);
 
-
-var buttonClickHandler = function () {
+var buttonClickHandler = function (event) {
     var time = $(this).parent().attr("hour");
-    console.log(time);
 
     var text = $(this).siblings(".description").val();
-    console.log(text);
 
-    localStorage.setItem(text, time);
+    localStorage.setItem(time, JSON.stringify(text));
 };
+
 
 var auditTime = function() {
     var currentHour = parseInt(moment().format("H"));
@@ -35,6 +33,21 @@ var auditTime = function() {
         }
     })
 };
+
+var loadAStorage = function (){
+    
+    $("#hour9 .description").val(JSON.parse(localStorage.getItem("9")));
+    $("#hour10 .description").val(JSON.parse(localStorage.getItem("10")));
+    $("#hour11 .description").val(JSON.parse(localStorage.getItem("11")));
+    $("#hour12 .description").val(JSON.parse(localStorage.getItem("12")));
+    $("#hour13 .description").val(JSON.parse(localStorage.getItem("13")));
+    $("#hour14 .description").val(JSON.parse(localStorage.getItem("14")));
+    $("#hour15 .description").val(JSON.parse(localStorage.getItem("15")));
+    $("#hour16 .description").val(JSON.parse(localStorage.getItem("16")));
+    $("#hour17 .description").val(JSON.parse(localStorage.getItem("17")));
+}
+
+loadAStorage();
 
 
 $(".saveBtn").on("click", buttonClickHandler);
