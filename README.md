@@ -34,8 +34,8 @@ AS AN employee with a busy schedule, I WANT to add important events to a daily p
 
 <img width="333" alt="Mobile Responsive" src="https://user-images.githubusercontent.com/97632228/161447394-446c9e75-15c2-4396-bb84-cbf8eb775db7.PNG">
 
-## Application Deployed
+## Application Deployment
 
-URL: 
+URL: https://avazque008.github.io/work-day-scheduler/
 
 
